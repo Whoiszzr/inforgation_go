@@ -26,7 +26,6 @@ func Fofa(ip string, apikey string, mail string) error {
 	// 拼接url
 	fofaUrl := "https://fofa.info/api/v1/search/all?email=" + mail + "&key=" + apikey +
 		"&qbase64=" + words + "&fields=host,title,country_name,province,city,server,protocol,isp"
-	fmt.Printf("fofaUrl: %v\n", fofaUrl)
 	// 请求
 	resp, err := http.Get(fofaUrl)
 	defer func(Body io.ReadCloser) {
