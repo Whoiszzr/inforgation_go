@@ -37,7 +37,7 @@ func Fofa(ip string, apikey string, mail string) error {
 		var data FofaData
 		_ = json.NewDecoder(resp.Body).Decode(&data)
 		if data.Error == true {
-			return errors.New("请求失败！请检查网络、APIKEY、EMAIL！")
+			return errors.New("请检查网络、FOFA_APIKEY、FOFA_EMAIL！")
 		} else {
 			tableData := handleData(data.Results)
 			err, tb := genTable(tableData)

@@ -8,7 +8,7 @@ import (
 func main() {
 	err := modules.Fofa("114.114.114.114", "**********", "**********@*****.com")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("FOFA查询失败！" + err.Error())
 	} else {
 		fmt.Println("OK")
 	}
