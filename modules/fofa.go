@@ -56,10 +56,10 @@ func handleData(fofaData [][]string) []map[string]string {
 	var tableData []map[string]string
 	for _, result := range fofaData {
 		tableData = append(tableData, map[string]string{"host": result[0]})
-		tableData = append(tableData, map[string]string{"title": result[1]})
-		tableData = append(tableData, map[string]string{"address": result[2] + " " + result[3] + " " + result[4]})
-		tableData = append(tableData, map[string]string{"service": result[5]})
-		tableData = append(tableData, map[string]string{"protocol": result[6]})
+		tableData = append(tableData, map[string]string{"标题": result[1]})
+		tableData = append(tableData, map[string]string{"地理位置": result[2] + " " + result[3] + " " + result[4]})
+		tableData = append(tableData, map[string]string{"服务名": result[5]})
+		tableData = append(tableData, map[string]string{"协议": result[6]})
 	}
 	return tableData
 }
