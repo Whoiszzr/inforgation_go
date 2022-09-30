@@ -45,7 +45,7 @@ func Fofa(ip string, apikey string, mail string) error {
 			if err != nil {
 				return err
 			} else {
-				tb
+				fmt.Println(tb)
 				return nil
 			}
 		}
